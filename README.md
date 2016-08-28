@@ -19,7 +19,7 @@ var gulp = require('gulp'),
     注：MD5在项目中已被注释起来，需要的同学可以打开注释
     
     
-2.  任务列表
+2. 任务列表
     // Styles任务
     gulp.task('styles', function() {
         //编译sass
@@ -45,7 +45,6 @@ var gulp = require('gulp'),
         .pipe(notify({ message: 'Styles task complete' }));
     });
 
-
     // Scripts任务
     gulp.task('scripts', function() {
         //js代码校验
@@ -69,7 +68,6 @@ var gulp = require('gulp'),
         //提醒任务完成
         .pipe(notify({ message: 'Scripts task complete' }));
     });
-
     // Images
     gulp.task('images', function() {
       return gulp.src('www/dev/img/*')
@@ -77,8 +75,6 @@ var gulp = require('gulp'),
         .pipe(gulp.dest('www/dist/img'))
         .pipe(notify({ message: 'Images task complete' }));
     });
-
-
     // Watch
     gulp.task('watch', function() {
       // Watch .scss files
@@ -92,8 +88,6 @@ var gulp = require('gulp'),
       // Watch any files in www/, reload on change
       gulp.watch(['www/*']).on('change', livereload.changed);
     });
-
-
     //使用connect启动一个Web服务器
     gulp.task('connect', function () {
       connect.server({
@@ -102,8 +96,6 @@ var gulp = require('gulp'),
         port:12306
       });
     });
-
-
     gulp.task('default',['styles','scripts','images','watch','connect']);
 
 
