@@ -18,7 +18,9 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'); //用于生成md5版本号
     注：MD5在项目中已被注释起来，需要的同学可以打开注释
     
-2.  // Styles任务
+    
+2.  任务列表
+    // Styles任务
     gulp.task('styles', function() {
         //编译sass
         return gulp.src('www/dev/sass/*.scss')
@@ -105,8 +107,8 @@ var gulp = require('gulp'),
     gulp.task('default',['styles','scripts','images','watch','connect']);
 
 
-3.如何使用（确保已全局安装了gulp）
- 命令行npm install或cnpm install安装依赖项，会生成一个node_modules的文件夹;
- 安装完毕后，命令行gulp查看编译效果。
+3. 如何使用（确保已全局安装了gulp）
+   命令行npm install或cnpm install安装依赖项，会生成一个node_modules的文件夹;
+   安装完毕后，命令行gulp查看编译效果。
  
  
